@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazen Abaza</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FAF6E3;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.5;
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header{
+background-color: #2A3663;
+color: #fff;
+padding: 20px;
+text-align: center;
+font-size: 24px;
+font-weight: bold;
+border-bottom: 2px solid #B59F78;
+
+}
+.line2{
+    width: 100%;
+    height: 2px;
+    background-color: #FAF6E3;
+    margin: 20px 0;
+}
+footer{
+background-color: #2A3663;
+color: #FAF6E3;
+padding: 20px;
+text-align: center;
+font-size: 14px;
+border-top: 2px solid #B59F78;
+}   
+content{
+   padding: 20px;
+    display: flex;
+    background-color: #FAF6E3;
+
+}
+/* nav sticky bar */
+nav{
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #FAF6E3;
+    z-index: 1000;
+    
+}
+nav ul{
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+nav ul li a{
+    color: #333;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* main container */
+.main-container{
+    display: flex;
+    min-height: 100vh;
+     flex: 1;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #FAF6E3;
+    border-radius: 15px;
+}
+.content .photo img{
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    margin-right: 20px ;
+    display: block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/* side bar */
+.sidebar {
+      width: 220px;
+      background-color: #D8DBBD;
+      padding: 20px;
+      position: relative;
+      border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    .content .line{
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        margin: 20px 0;
+    }
+.sidebar ul li a{
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    padding: 10px 0;
+}
+.table-section table {
+      width: 100%;
+      border: 3px solid #2A3663;
+      margin-top: 10px;
+      border-radius: 10px;
+      background-color: #2A3663;
+      
+    }
+.table-section th, .table-section td {
+      border: 3px solid #B59F78;
+      padding: 10px;
+      text-align: left;
+      border-radius: 10px;
+      background-color: #FAF6E3;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background: #D8DBBD;
+      border: 1px solid #B59F78;
+      background-color: #FAF6E3;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      transition: transform 0.3s, background-color 0.3s;
+      animation: fadeIn 1s ease-in;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #f8f8f8;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .contact-form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .form-row > * {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+     .svg-logo {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .positioning {
+      position: relative;
+      background: #ecf0f1;
+      height: 200px;
+      margin-top: 30px;
+    }
+
+    .positioning .box-relative {
+      position: relative;
+      background: #3498db;
+      color: white;
+      padding: 10px;
+      width: 120px;
+      border-radius: 5px;
+    }
+
+    .positioning .box-absolute {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #e74c3c;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2A3663;
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      z-index: 999;
+    }
+    </style>
+
+</head>
+<body>
+   <header class="header">
+    <h1 style="color: #FAF6E3;">Mazen Abaza</h1><br>
+    <div class="line2"></div>
+    <p style="color: #FAF6E3;"><b> Frontend  trainer | Designer | Traveller </b></p>
+   </header>
+   <nav class="nav" style="background-color: #B59F78;">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Pricing</a></li>
+    </ul>
+   </nav>
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">join us</a></li>
+                <li><a href="#">form page</a></li>
+                <li><a href="#">who made this?</a></li>
+                <li><a href="#">feedback</a></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <div class="photo"> <img src="images/Mazen Abaza 3.jpg" alt="Mazen Abaza" ></div>
+           
+            <div class="line"></div>
+            <h2>Mazen Abaza</h2>
+            <h2>About Me</h2>
+            <p>Hello, I'm <b>Mazen Abaza</b>. I create beautiful and responsive web applications using HTML, CSS, and JavaScript.</p>
+            <p>I enjoy 💻 coding, 🎵 music, ☕ coffee, and solving real problems.</p>
+            <p><a href="https://example.com" target="_blank" style="color: blue;">Visit my portfolio</a></p>
+            <h2>Text Formatting</h2>
+           <p><b>Bold</b>, <i>Italic</i>, <u>Underline</u>, <mark>Highlighted</mark>, <small>Small text</small>, A<sup>2</sup>,       H<sub>2</sub>O</p>\
+             <h2>Unordered List</h2>
+           <ul>
+              <li>Coding</li>
+              <li>Reading</li>
+              <li>Gaming</li>
+            </ul>
+            <h2>Ordered List</h2>
+            <ol>
+               <li>JavaScript</li>
+               <li>HTML</li>
+               <li>CSS</li>
+            </ol>
+           <div class="table-section">
+           <table>
+           <tr><th>Skill</th><th>Level</th></tr>
+           <tr><td>Arabic</td><td>Native</td></tr>
+           <tr><td>English</td><td>Advanced</td></tr>
+           </table>
+           </div>
+            <div class="line"></div>
+            <div class="projects">
+              <h2>Projects</h2>
+              <div class="card"><h3>Profile Page</h3><p>Semantic HTML with Flexbox.</p></div>
+              <div class="card"><h3>Registration Form</h3><p>Full input UI + responsive.</p></div>
+              <div class="card"><h3>Quiz App</h3><p>Interactive JS logic with DOM.</p></div>
+            </div> <br> <br>
+            <div class="line"></div>
+            <div class="contact-form">
+              <h2>Contact Me</h2>
+             <form class="contact-form">
+            <div class="form-row">
+             <input type="text" placeholder="Your Name" required>
+             <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-row">
+             <select>
+              <option>Question</option>
+              <option>Job</option>
+              <option>Mentorship</option>
+             </select>
+             <input type="text" placeholder="Subject">
+            </div>
+         <textarea rows="5" placeholder="Your message..."></textarea>
+         <input type="submit" value="Send">
+         </form>
+            </div>
+            <div class="svg-logo">
+                <h3>My SVG Logo</h3>
+              <img src="images/reshot-icon-wechat-32YM7QAPL5.svg" alt="SVG Logo">
+            </div>
+            <div class="positioning">
+                <div class="box-relative">Relative</div>
+                <div class="box-absolute">Absolute</div>
+                </div>
+            </div>
+     </section>
+    <div class="fixed-box">Powered by © Mazen Abaza</div>
+<footer class="footer">
+    <p>all copy rights to Mazen Abaza  &copy; 2025</p>
+</footer>
+</body>
+</html>
